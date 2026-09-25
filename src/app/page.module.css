@@ -1,0 +1,113 @@
+.main {
+  max-width : 900px;
+  padding : 22px;
+  margin : 24px auto;
+  color : #ff0000;
+}
+
+.tituloPixel {
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  line-height: 2;
+  color: #000080;
+}
+
+.layoutColumnas {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  align-items:  flex-start;
+}
+
+.columnaPrincipal {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columnaLateral {
+  flex: 1;
+}
+
+.outside {
+  background: var(--color-panel);
+  display: block;
+  padding: 16px;
+  border: 2px solid black;
+}
+
+.novedades {
+  background: var(--color-panel);
+  padding: 16px;
+  border: 2px solid black;
+  margin-top: 50px;
+}
+
+.sugerencias {
+  background: var(--color-panel);
+  padding: 16px;
+  border: 2px solid black;
+  margin-top: 50px;
+}
+
+.tituloSeccion {
+  font-family: var(--font-mono);
+  border-color: 2px dashed black;
+  padding-bottom: 6px;
+  
+}
+
+/* PARA SECCIÓN PRINCIPAL */
+.hero {
+  text-align: center;
+  padding: 30px 16px;
+}
+
+.gifsLokos {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  pointer-events: none;
+}
+
+.gifsLokos img {
+  position: absolute;
+  z-index: 10;
+}
+
+.perroLoko {
+  top: -250px;
+  right: 100px;
+}
+
+.gatoLoko {
+  top: -150;
+  right: 325px;
+}
+
+.computa {
+  top: -475px;
+  right: 275px;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.footer {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin-top: 150px;
+}
+
+
