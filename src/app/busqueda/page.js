@@ -1,10 +1,19 @@
 "use client";
 
+import GET from '../api/libros/busqueda/route';
 import { useState } from "react";
 import styles from "./busqueda.module.css";
 
 export default function Busqueda() {
   const [busqueda, setBusqueda] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (!busqueda.trim()) return;
+    
+    window.location.href = `../api/libros/busqueda?q=${encodeURIComponent(busqueda)}`;
+  }; 
+
   return (
     <main className={styles.main}>
 
@@ -13,7 +22,7 @@ export default function Busqueda() {
          BUSCAR LIBROS 🔍
         </h1>
 
-         <div className={styles.buscador}>
+         <form onSubmit={handleSearch} className={styles.buscador}>
           <input
             type="text"
             value={busqueda}
@@ -21,10 +30,12 @@ export default function Busqueda() {
             placeholder="Escribe un título, autor o ISBN"
           />
 
+
+
           <button className="beveled-button">
             BUSCAR
           </button>
-        </div>
+        </form>
 
       </section>
     </main>
