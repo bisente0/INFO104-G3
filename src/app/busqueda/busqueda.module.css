@@ -1,0 +1,37 @@
+.main {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 22px;
+}
+
+.cajaBusqueda {
+  background: var(--color-panel);
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.titulo {
+  font-family: var(--font-mono);
+  text-align: center;
+  margin-top: 0;
+}
+
+.buscador {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.buscador input {
+  width: 60%;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  border: 2px solid black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
