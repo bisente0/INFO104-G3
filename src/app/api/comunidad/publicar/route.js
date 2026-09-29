@@ -20,6 +20,6 @@ export async function POST(request){
 
     const NUEVO_POST = agregarPost(DATOS_FORMULARIO);
 
-    return NextResponse.json(NUEVO_POST, { status: 201 });
+    return nextResponse.json(NUEVO_POST, { status: 201 });
 }
 
