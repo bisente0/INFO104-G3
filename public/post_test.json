@@ -1,0 +1,40 @@
+[
+    {   
+        "user" : "limb0",
+        "date" : "29-08-2006",
+        "msg" : "blablablabla, blablbalblablab, blalblabla ",
+        "book_isbn13" : 9788445073728,
+        "book_name" : "El Señor de los Anillos, i. La Comunidad del Anillo",
+        "book_author" : "J. R. R. Tolkien",
+        "book_year" : 1954,
+        "book_category" : "fantasy",
+        "book_language" : "spanish",
+        "book_publisher" : "Minotauro"
+    },
+
+    {
+        "user" : "DrPepper",
+        "date" : "31-08-2006",
+        "msg" : "ñiñiñiñiññiñiii, ñiñiññiñiñi, ñiñiñiiñi",
+        "book_isbn13" : 9788417430290,
+        "book_name" : "El Retrato de Dorian Gray",
+        "book_author" : "Oscar Wilde",
+        "book_year" : 1890,
+        "book_category" : "classic fiction",
+        "book_language" : "spanish",
+        "book_publisher" : "Editorial Alma"
+    },
+
+    {
+        "user" : "madoooy",
+        "date" : "15-12-2006",
+        "msg" : "pipipiipipi, pipiipipipipipp, pipipi",
+        "book_isbn13" : 9781408855676,
+        "book_name" : "Harry Potter and the Prisoner of Azkaban (Bloomsbury Publishing)",
+        "book_author" : "J. K. Rowling",
+        "book_year" : 1999,
+        "book_category" : "fantasy",
+        "book_language" : "english",
+        "book_publisher" : "Bloomsbury Children's Books"
+    }
+]

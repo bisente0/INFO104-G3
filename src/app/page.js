@@ -27,13 +27,14 @@ export default function Home() {
         <div className={styles.columnaPrincipal}>
         <section className={styles.novedades}>
           <h2 className={styles.tituloSeccion}>
-            NOVEDADES DEL MES!!!
+            PUBLICACIONES RECIENTES
           </h2>
           <div className={styles.grid}>
-            LA IDEA ES RENDERIZAR LOS LIBROS ACÁ CON UN .MAP()
-            MISIÓN DE CREAR OBJETOS TIPO BOOKINFO O ALGO ASÍ PARA PODER RECORRER TODOS Y IMPRIMIRLOS CON GRID.
-            PROBABLEMENTE NECESITE OTROS DOS ARCHIVOS EN COMPONENTES, UNO DE LIBROS Y OTRO EL MÓDULO DE ESTE,
-            Y PARA TESTEAR, UN .JSON CON LOS LIBROS A LEER.
+            Establecer colección de datos iniciales
+            (usuario, libro, mensaje, autor),
+            diseñar función POST(request) en API/COMUNIDAD,
+            usar la función en el frontend 
+            (diseño visualización).
           </div>
         </section>
         </div>
@@ -41,11 +42,13 @@ export default function Home() {
         <div className={styles.columnaLateral}>
         <section className={styles.sugerencias}>
           <h2 className={styles.tituloSeccion}>
-            SUGERIDOS!!!!
+            RANKING
           </h2>
           <div className={styles.grid}>
-            AQUÍ SE DESARROLLARÍA UN ALGORITMO PARA ENCONTRAR, POR ORDEN DE PRIORIDAD, LOS LIBROS CON MÁS
-            COINCIDENCIAS DE GÉNERO SEGÚN LA BIBLIOTECA DEL USUARIO.
+            Usar colección de datos iniciales para tener información
+            reemplazable de un ranking de libros más leídos por los usuarios.
+            (Desarrollar a futuro en api/comunidad), esto implica tener un sistema
+            de registro para los usuarios.
           </div>
         </section>
         </div>

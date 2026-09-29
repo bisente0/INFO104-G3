@@ -1,0 +1,19 @@
+[
+    {
+        "rank" : 1,
+        "user" : "pedrito666",
+        "books_read" : 777
+    },
+
+    {
+        "rank" : 2,
+        "user" : "juanito1414",
+        "books_read" : 147
+    },
+
+    {
+        "rank" : 3,
+        "user" : "dieguito2121",
+        "books_read" : 21
+    }
+]
