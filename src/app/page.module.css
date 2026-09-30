@@ -52,38 +52,21 @@
 }
 
 .tituloSeccion {
-  font-family: var(--font-mono);
-  border-color: 2px dashed black;
-  padding-bottom: 6px;
-  
+  font-family: var(--font-pixel);
+  font-size: 30px;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { color: #ff00aa; }
+  50% { color: #ffd900; }
+  100% { color: #ff00aa; }
 }
 
 /* PARA SECCIÓN PRINCIPAL */
 .hero {
   text-align: center;
   padding: 30px 16px;
-}
-
-.gifsLokos {
-  position: relative;
-  width: 100vw;
-  height: 300px;
-  pointer-events: none;
-}
-
-.gifsLokos img {
-  position: absolute;
-  z-index: 10;
-}
-
-.perroLoko {
-  top: -250px;
-  right: 100px;
-}
-
-.gatoLoko {
-  top: -150;
-  right: 325px;
 }
 
 .computa {
@@ -110,4 +93,31 @@
   margin-top: 150px;
 }
 
+.slider {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  color: black;
 
+  scrollbar-width: thin;
+  scrollbar-color: rgba(147, 69, 111, 0.5) transparent;
+}
+
+.sliderContenido {
+  display: flex;
+}
+
+.post {
+  min-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  padding: 0 10px;
+}
+
+.portada {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+}
