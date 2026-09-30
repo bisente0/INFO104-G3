@@ -20,14 +20,16 @@
 }
 
 .columnaPrincipal {
-  flex: 2;
+  flex: 2 1 0;
   display: flex;
+  min-width: 0;
   flex-direction: column;
   gap: 24px;
 }
 
 .columnaLateral {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .outside {
@@ -95,6 +97,7 @@
 
 .slider {
   width: 100%;
+  max-width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
