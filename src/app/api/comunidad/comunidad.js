@@ -48,32 +48,32 @@ export function agregarPost(datos) {
 
 // sistema ranking
 export function obtenerTopLibros(cantidad = 3) {
-const conteo = {};
+    const conteo = {};
 
-for (const post of obtenerPosts()) {
-const clave = post.book_isbn13;
+    for (const post of obtenerPosts()) {
+        const clave = post.book_isbn13;
 
-if (!conteo[clave]) {
-    conteo[clave] = {
-    book_isbn13: clave,
-    book_name: post.book_name,
-    book_author: post.book_author,
-    total: 0,
-    lectores: [],
+    if (!conteo[clave]) {
+        conteo[clave] = {
+        book_isbn13: clave,
+        book_name: post.book_name,
+        book_author: post.book_author,
+        total: 0,
+        lectores: [],
     };
-}
-
-conteo[clave].total++;
-
-if (!conteo[clave].lectores.includes(post.user)) {
-    conteo[clave].lectores.push(post.user);
     }
-}
 
-return Object.values(conteo)
+    conteo[clave].total++;
+
+    if (!conteo[clave].lectores.includes(post.user)) {
+        conteo[clave].lectores.push(post.user);
+        }
+    }
+
+    return Object.values(conteo)
     .sort((a, b) => b.total - a.total)
     .slice(0, cantidad);
-}
+    }
 
 
 
