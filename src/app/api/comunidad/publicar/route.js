@@ -1,4 +1,4 @@
-import { nextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { obtenerPosts, agregarPost } from "../comunidad";
 
 export async function GET() {
@@ -20,6 +20,6 @@ export async function POST(request){
 
     const NUEVO_POST = agregarPost(DATOS_FORMULARIO);
 
-    return nextResponse.json(NUEVO_POST, { status: 201 });
+    return NextResponse.json(NUEVO_POST, { status: 201 });
 }
 

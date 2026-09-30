@@ -1,9 +1,7 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import Bar from "./components/bar";
 import Link from "next/link";
-import EmblaCarousel from "embla-carousel";
-
+import { obtenerPosts } from "./api/comunidad/comunidad";
 
 export default function Home() {
 
