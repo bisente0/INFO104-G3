@@ -3,8 +3,9 @@ import Bar from "./components/bar";
 import Link from "next/link";
 import { obtenerPosts } from "./api/comunidad/comunidad";
 
-export default function Home() {
 
+export default function Home() {
+  const lectores = obtenerPosts();
   return (
     <>
       <Bar />
@@ -25,14 +26,26 @@ export default function Home() {
         <div className={styles.columnaPrincipal}>
         <section className={styles.novedades}>
           <h2 className={styles.tituloSeccion}>
-            PUBLICACIONES RECIENTES
+            PUBLICACIONES RECIENTES 
           </h2>
-          <div className={styles.grid}>
-            Establecer colección de datos iniciales
-            (usuario, libro, mensaje, autor),
-            diseñar función POST(request) en API/COMUNIDAD,
-            usar la función en el frontend 
-            (diseño visualización).
+          <div className={styles.slider}>
+            <div className={styles.sliderContenido}>
+            {lectores.map((lector, i) => (
+            <div className={styles.post} key ={i}>
+
+              <h3>{lector.user}</h3>
+              <strong>{lector.book_name}</strong>
+              <p>{lector.msg}</p>
+
+              <img
+                src={`https://covers.openlibrary.org/b/isbn/${lector.book_isbn13}-M.jpg`}
+                alt={`Portada de ${lector.book_name}`}
+                className={styles.portada}
+              />
+
+              </div>
+              ))}
+          </div>
           </div>
         </section>
         </div>
@@ -53,7 +66,7 @@ export default function Home() {
       </div>
 
       <footer className={`beveled-box ${styles.footer}`}>
-        <p> PROTOTIPO DE APLICACIÓN. ÚLTIMA UPDATE (27/08/2026) </p>
+        <p> PROTOTIPO DE APLICACIÓN. ÚLTIMA UPDATE (29/09/2026) </p>
       </footer>
 
       </main>
