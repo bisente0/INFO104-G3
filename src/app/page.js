@@ -1,11 +1,17 @@
 import styles from "./page.module.css";
 import Bar from "./components/bar";
 import Link from "next/link";
-import { obtenerPosts } from "./api/comunidad/comunidad";
+import { obtenerPosts, obtenerTopLibros } from "./api/comunidad/comunidad";
 
+
+export const dynamic = "force-dynamic";
 
 export default function Home() {
+  const ranking = obtenerTopLibros(3);
   const lectores = obtenerPosts();
+
+
+
   return (
     <>
       <Bar />
@@ -20,6 +26,8 @@ export default function Home() {
             BÚSQUEDA 🔍
           </Link>
         </section>
+
+    
 
         <div className={styles.layoutColumnas}>
 
@@ -48,22 +56,30 @@ export default function Home() {
           </div>
           </div>
         </section>
-        </div>
-
-        <div className={styles.columnaLateral}>
-        <section className={styles.sugerencias}>
-          <h2 className={styles.tituloSeccion}>
-            RANKING
-          </h2>
-          <div className={styles.grid}>
-            Usar colección de datos iniciales para tener información
-            reemplazable de un ranking de libros más leídos por los usuarios.
-            (Desarrollar a futuro en api/comunidad), esto implica tener un sistema
-            de registro para los usuarios.
-          </div>
-        </section>
-        </div>
       </div>
+
+      <div className={styles.columnaLateral}>
+        <section className={styles.sugerencias}>
+          <h2 className={styles.tituloSeccion}>RANKING</h2>
+          <div className={styles.grid}>
+            {ranking.length === 0 && <p>No hay datos todavía.</p>}
+            {ranking.map((libro, i) => (
+              <details key={libro.book_isbn13}>
+                <summary>
+                  {i + 1}. {libro.book_name} ({libro.book_author}) — {libro.total} lecturas
+                  </summary>
+                  <ul>
+                    {libro.lectores.map((usuario) => (
+                      <li key={usuario}>{usuario}</li>
+                      ))}
+                      </ul>
+                      </details>
+                    ))}
+                    </div>
+                    </section>
+                    </div>
+                    </div>
+
 
       <footer className={`beveled-box ${styles.footer}`}>
         <p> PROTOTIPO DE APLICACIÓN. ÚLTIMA UPDATE (29/09/2026) </p>

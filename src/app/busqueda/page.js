@@ -31,7 +31,6 @@ export default function Busqueda() {
           />
 
 
-
           <button className="beveled-button">
             BUSCAR
           </button>
