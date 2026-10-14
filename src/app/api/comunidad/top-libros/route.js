@@ -4,5 +4,5 @@ import { obtenerTopLibros } from "../../comunidad";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-    return NextResponse.json(obtenerTopLibros(3));
+    return NextResponse.json(obtenerTopLibros());
 }

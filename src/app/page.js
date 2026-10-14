@@ -3,11 +3,17 @@ import Bar from "./components/bar";
 import Link from "next/link";
 import { obtenerPosts, obtenerTopLibros } from "./api/comunidad/comunidad";
 
+/**
+ * check next-auth
+ * check database (mongodb or postgresql idk...)
+ * add dirpath for auth api
+ * create authentication logic (password hashing, environment variables, https...)
+ */
 
 export const dynamic = "force-dynamic";
 
 export default function Home() {
-  const ranking = obtenerTopLibros(3);
+  const ranking = obtenerTopLibros(10);
   const lectores = obtenerPosts();
 
   return (
