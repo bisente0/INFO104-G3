@@ -19,6 +19,10 @@ model Book {
   isbn13    String  @id
   name      String
   author    String
+  year      String?
+  category  String?
+  language  String?
+  publisher String?
   coverPath String
   posts     Post[]
 }
