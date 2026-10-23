@@ -2,14 +2,14 @@
   max-width : 900px;
   padding : 22px;
   margin : 24px auto;
-  color : #ff0000;
+  color : #ca8215;
 }
 
 .tituloPixel {
   font-family: var(--font-pixel);
-  font-size: 1.4rem;
+  font-size: 2rem;
   line-height: 2;
-  color: #000080;
+  color: #250c06;
 }
 
 .layoutColumnas {
@@ -41,6 +41,8 @@
 
 .novedades {
   background: var(--color-panel);
+  background-color: #e2d6af;
+  color: #250c06;
   padding: 16px;
   border: 2px solid black;
   margin-top: 50px;
@@ -48,6 +50,8 @@
 
 .sugerencias {
   background: var(--color-panel);
+  background-color: #e2d6af;
+  color: #250c06;
   padding: 16px;
   border: 2px solid black;
   margin-top: 50px;
@@ -60,9 +64,9 @@
 }
 
 @keyframes color-change {
-  0% { color: #ff00aa; }
-  50% { color: #ffd900; }
-  100% { color: #ff00aa; }
+  0% { color: #ffb300; }
+  50% { color: #8a5216; }
+  100% { color: #ffb300; }
 }
 
 /* PARA SECCIÓN PRINCIPAL */
@@ -123,4 +127,50 @@
   width: 120px;
   height: 180px;
   object-fit: cover;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 800px;
+  background-color: #e2d6af;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card::after, .card::before{
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 50%, #791626f3, #e6a308e2, rgb(255, 193, 87));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 6px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
 }

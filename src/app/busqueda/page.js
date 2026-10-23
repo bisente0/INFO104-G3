@@ -17,7 +17,7 @@ export default function Busqueda() {
   return (
     <main className={styles.main}>
 
-      <section className={styles.cajaBusqueda}>
+      <section className={styles.card}>
         <h1 className={styles.titulo}>
          BUSCAR LIBROS 🔍
         </h1>

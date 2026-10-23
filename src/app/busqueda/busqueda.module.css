@@ -6,6 +6,7 @@
 
 .cajaBusqueda {
   background: var(--color-panel);
+  background-color: #e2d6af ;
   border: 2px solid black;
   padding: 20px;
 }
@@ -34,4 +35,50 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 600px;
+  background-color: #e2d6af;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card::after, .card::before{
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 50%, #791626f3, #e6a308e2);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 6px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
 }

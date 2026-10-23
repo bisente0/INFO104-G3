@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Bar />
       <main className={styles.main}>
-        <section className={`beveled-box ${styles.hero}`}>
+        <section className={`beveled-box ${styles.hero} ${styles.card}`}>
           <h1 className={styles.tituloPixel}>SUPERPAGINA!!</h1>
           <p className={styles.subtitulo}>
             <span className="parpadear">  ☆★ ATENCIOOOON ★☆  </span>

@@ -1,11 +1,11 @@
 :root {
   /* ESQUEMA DE KOLORES 🔥🔥🔥*/
-  --color-bg: #788cc8;
+  --color-bg: #9B653B;
   --color-panel: #c0c0c0;      
   --color-accent: #ff00ff;     
   --color-highlight: #ffff33;  
   --color-link: #0000ee;
-  --color-link-visited: #551a8b;
+  --color-link-visited: #bcb1c6;
   --color-text: #000000;
   
   --border-light: #ffffff;
@@ -21,7 +21,7 @@
 
 body {
   background-color: var(--color-bg);
-  background-image: radial-gradient(circle, #b7229ba0 1px, transparent 2px);
+  background-image: radial-gradient(circle, #865928a0 1px, transparent 2px);
   background-size: 18px 18px;
   font-family: var(--font-body);
   color: var(--color-text);
@@ -33,15 +33,18 @@ link-thing:visited { color: var(--color-link-visited)}
 
 .beveled-box {
   background: var(--color-panel);
+  background-color: #ccc096;
   border-top: 2px solid var(--border-light);
   border-left: 2px solid var(--border-light);
   border-right: 2px solid var(--border-dark);
   border-bottom: 2px solid var(--border-dark);
   padding: 12px;
+  
 }
 
 .beveled-button {
   background: var(--color-panel);
+  background-color: #CEC2B0;
   border-top: 2px solid var(--border-light);
   border-left: 2px solid var(--border-light);
   border-bottom: 2px solid var(--border-dark);
@@ -101,4 +104,3 @@ link-thing:visited { color: var(--color-link-visited)}
   color: white;
   animation: desplazar 8s linear infinite;
 }
-

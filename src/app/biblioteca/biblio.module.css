@@ -1,0 +1,89 @@
+.main {
+  max-width : 400px;
+  padding : 22px;
+  margin : 24px auto;
+  color : #ca8215;
+}
+
+.titulopixel {
+  font-family: var(--font-pixel);
+  font-size: 2rem;
+  line-height: 2;
+  color: #250c06;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+} 
+
+
+.h1 {
+  background: var(--color-panel);
+  background-color: #e2d6af ;
+  border: 2px solid black;
+  padding: 18px;
+}
+
+.beveled-box {
+  background: var(--color-panel);
+  background-color: #ccc096;
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+  padding: 12px;
+  
+}
+
+.titulo {
+  font-family: var(--font-mono);
+  text-align: center;
+  margin-top: 0;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 500px;
+  background-color: #e2d6af;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card::after, .card::before{
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 50%, #791626f3, #e6a308e2);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 6px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}

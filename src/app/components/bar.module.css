@@ -21,6 +21,7 @@
     flex-wrap: wrap;
     padding: 10px;
     background: var(--color-panel);
+    background-color: #7a4949;
 }
 
 .navBoton {
