@@ -25,6 +25,16 @@
   padding: 18px;
 }
 
+.botonAñadir{
+  margin-left: -400px;
+  margin-right: 500px;
+
+  width: 140px;
+  height: 60px;
+  font-size: 26;
+
+}
+
 .beveled-box {
   background: var(--color-panel);
   background-color: #ccc096;
@@ -86,4 +96,25 @@
   to{
     --angle: 360deg;
   }
+}
+
+.beveled-button {
+  background: var(--color-panel);
+  background-color: #CEC2B0;
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-dark);
+  font-family: var(--font-body);
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+.beveled-button:active {
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
 }

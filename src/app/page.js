@@ -80,7 +80,7 @@ export default function Home() {
 
 
       <footer className={`beveled-box ${styles.footer}`}>
-        <p> PROTOTIPO DE APLICACIÓN. ÚLTIMA UPDATE (29/09/2026) </p>
+        <p> PROTOTIPO DE APLICACIÓN. ÚLTIMA UPDATE (22/10/2026) </p>
       </footer>
 
       </main>
