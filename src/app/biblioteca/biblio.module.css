@@ -32,7 +32,6 @@
   width: 140px;
   height: 60px;
   font-size: 26;
-
 }
 
 .beveled-box {
@@ -43,7 +42,6 @@
   border-right: 2px solid var(--border-dark);
   border-bottom: 2px solid var(--border-dark);
   padding: 12px;
-  
 }
 
 .titulo {

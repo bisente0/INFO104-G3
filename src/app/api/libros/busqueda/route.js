@@ -22,8 +22,9 @@ export async function GET(request) {
         );
     }
 
+    const limite_libros = 20; 
     const response = await fetch(
-        `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}`
+        `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=${limite_libros}`
     )
     
 

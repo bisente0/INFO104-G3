@@ -1,0 +1,106 @@
+
+.main {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: var(--font-mono);
+}
+
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.titulo {
+  font-size: 24px;
+  margin: 0;
+}
+
+.libros {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.libro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.libro h2 {
+  font-size: 19px;
+  margin-top: 0;
+}
+
+.libro p {
+  margin-bottom: 6px;
+}
+
+.botonAnadir {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 16px;
+  }
+
+  .libro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card {
+  margin: 20 auto;
+  padding: 8px;
+  width: 500px;
+  background-color: #e2d6af;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card::after, .card::before{
+  --angle: 0deg;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 50%, #791626f3, #e6a308e2);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 6px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}

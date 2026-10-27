@@ -1,11 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./biblio.module.css";
 import Link from "next/link";
 
 export default function Biblioteca(){
-   const [biblioteca, setBiblioteca] = useState("");
+   const [biblioteca, setBiblioteca] = useState([]);
+   const [reseñas, setReseñas] = useState({});
+
+   
     return (
       <main className={styles.main}>
     <section className={`beveled-box ${styles.card} ${styles.hero}`}>

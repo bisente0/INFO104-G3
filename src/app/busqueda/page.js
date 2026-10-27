@@ -11,7 +11,7 @@ export default function Busqueda() {
     e.preventDefault();
     if (!busqueda.trim()) return;
     
-    window.location.href = `../api/libros/busqueda?q=${encodeURIComponent(busqueda)}`;
+    window.location.href = `/resultados?q=${encodeURIComponent(busqueda)}`;
   }; 
 
   return (
