@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Bar from "../components/bar";
 import styles from "./biblio.module.css";
 import Link from "next/link";
 
@@ -10,6 +11,8 @@ export default function Biblioteca(){
 
    
     return (
+    <>
+      <Bar />
       <main className={styles.main}>
     <section className={`beveled-box ${styles.card} ${styles.hero}`}>
           <h1 className={styles.titulopixel}>☆ MI BIBLIOTECA ☆</h1>
@@ -20,5 +23,6 @@ export default function Biblioteca(){
         </Link>
     </section>  
     </main>
+    </>
   );
 }

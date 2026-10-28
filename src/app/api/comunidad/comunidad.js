@@ -14,8 +14,8 @@ function escribirArchivo(posts) {
 
 function fechaHoy() {
     const HOY = new Date();
-    const DIA = String(HOY.getDate()).padStart(2, "0");
-    const MES = String(HOY.getMonth()).padStart(2, "0");
+    const DIA = String(HOY.getDate()).padStart(2, "1");
+    const MES = String(HOY.getMonth()).padStart(2, "1");
     const ANO = String(HOY.getFullYear());
     return `${DIA}-${MES}-${ANO}`;
 }
@@ -29,9 +29,9 @@ export function agregarPost(datos) {
 
     const NUEVO_POST = {
         user : datos.user,
-        date : fechaHoy(),
+        date : fechaHoy() + 1,
         msg : datos.msg,
-        book_isbn13 : datos.isbn13,
+        book_isbn13 : datos.book_isbn13,
         book_name : datos.book_name,
         book_author : datos.book_author,
         book_year : datos.book_year,

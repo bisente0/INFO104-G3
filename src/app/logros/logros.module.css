@@ -1,0 +1,146 @@
+.main{
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: var(--font-mono);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card {
+    margin: 20px auto 36px;
+    padding: 8px;
+    width: min(500px, 100%);
+    box-sizing: border-box;
+    background-color: #e2d6af;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card::after, .card::before,
+.desbloqueado::after, .desbloqueado::before {
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, #791626f3, #e6a308e2);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 6px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.card::before, .desbloqueado::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card::after, .card::before,
+    .desbloqueado::after, .desbloqueado::before {
+        animation: none;
+    }
+}
+
+.titulo {
+    font-size: 24px;
+    margin: 0;
+    color: #791626;
+}
+
+.contador {
+    margin: 6px 0 0;
+    font-size: 15px;
+    color: #4a2c17;
+}
+
+.logros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 32px;
+}
+
+.logro {
+    position: relative;
+    box-sizing: border-box;
+    padding: 18px 14px;
+    text-align: center;
+    border-radius: 10px;
+    border-top: 2px solid #f6eed2;
+    border-left: 2px solid #f6eed2;
+    border-right: 2px solid #4a2c17;
+    border-bottom: 2px solid #4a2c17;
+}
+
+.desbloqueado {
+    background-color: #e2d6af;
+    color: #4a2c17;
+}
+
+.bloqueado {
+    background-color: #b9ab82;
+    color: #4a3a28;
+}
+
+.medalla {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    border-radius: 50%;
+    border: 3px double #791626;
+    background-color: #f6eed2;
+}
+
+.bloqueado .medalla {
+    background-color: #9c8f6b;
+    border-color: #4a3a28;
+}
+
+.logroTitulo {
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: #791626;
+}
+
+.bloqueado .logroTitulo {
+    color: #4a3a28;
+}
+
+.descripcion {
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.estado {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border: 1px solid #4a2c17;
+}
+
+.desbloqueado .estado {
+    background-color: #e6a308;
+}

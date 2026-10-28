@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./resultados.module.css";
 import Link from "next/link";
+import Bar from "../components/bar";
 
 export default function Resultados() {
   const [libros, setLibros] = useState([]);
@@ -19,9 +20,11 @@ export default function Resultados() {
       })
       .then((data) => setLibros(data))
       .catch(() => setError("No se pudieron cargar los libros :("))
-      .finally(() => setCargando(false)); });
+      .finally(() => setCargando(false)); }, []);
 
   return (
+    <>
+      <Bar />
     <main className={styles.main}>
       <section className={`beveled-box ${styles.card}`}>
         <h1 className={styles.titulo}>☆ RESULTADOS DE BÚSQUEDA ☆</h1>
@@ -56,5 +59,6 @@ export default function Resultados() {
         ))}
       </section>
     </main>
+    </>
   );
 }

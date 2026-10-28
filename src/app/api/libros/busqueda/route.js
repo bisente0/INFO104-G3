@@ -4,7 +4,7 @@
 function limpiarDatos(data){
     return data.docs.map((doc) => ({
         book_name: doc.title,
-        book_author: doc.author_name[0] ?? "Autor desconocido",
+        book_author: doc.author_name?.[0] ?? "Autor desconocido",
         book_first_publish: doc.first_publish_year ?? null,
         books_found: data.num_found,
         book_languages: doc.language ?? "Lenguaje desconocido",

@@ -25,7 +25,7 @@ export default function Home() {
           </Link>
         </section>
 
-    
+
 
         <div className={styles.layoutColumnas}>
 

@@ -2,6 +2,7 @@
 
 import GET from '../api/libros/busqueda/route';
 import { useState } from "react";
+import Bar from '../components/bar';
 import styles from "./busqueda.module.css";
 
 export default function Busqueda() {
@@ -15,6 +16,8 @@ export default function Busqueda() {
   }; 
 
   return (
+    <>
+      <Bar />
     <main className={styles.main}>
 
       <section className={styles.card}>
@@ -38,6 +41,6 @@ export default function Busqueda() {
 
       </section>
     </main>
-    
+    </>
   );
 }
